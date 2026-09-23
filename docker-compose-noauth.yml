@@ -3,9 +3,9 @@ services:
     platform: linux/amd64
     image: nginx:latest
     ports:
-      - "80:80"
+      - "7082:80"
     volumes:
-      - ./nginx/nginx-noauth.conf:/etc/nginx/conf.d/default.conf
+      - /mnt/user/appdata/essentialopen/nginx/nginx-noauth.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - essential-viewer
       - essential-api
@@ -16,9 +16,9 @@ services:
     build: 
       context: viewer
     volumes:
-      - ./EssentialAM/essential_viewer:/usr/local/tomcat/webapps/essential_viewer
+      - /mnt/user/appdata/essentialopen/EssentialAM/essential_viewer:/usr/local/tomcat/webapps/essential_viewer
     ports:
-      - 8080:8080
+      - 7080:8080
     env_file:
       - ./env_file.env
   
@@ -28,7 +28,7 @@ services:
       dockerfile: Dockerfile
     platform: linux/amd64
     volumes:
-      - ./EssentialAM/Repository:/app/resources/essential
+      - /mnt/user/appdata/essentialopen/EssentialAM/Repository:/app/resources/essential
     ports:
       - "5100:5100"
     environment:
@@ -47,9 +47,9 @@ services:
       dockerfile: Dockerfile
     platform: linux/amd64
     ports:
-      - "8081:80"
+      - "7081:80"
     environment:
-      - API_ORIGIN=${API_ORIGIN:-http://localhost:5100}
+      - API_ORIGIN=
       - VIEWER_URL=${VIEWER_URL:-http://essential-viewer:8080/essential_viewer}
       - VIEWER_USER=${VIEWER_USER:-publisher}
     env_file:
