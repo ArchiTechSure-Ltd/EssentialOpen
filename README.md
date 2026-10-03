@@ -8,6 +8,18 @@ Additionally, the repository includes configuration scripts to integrate Azure E
 
 These scripts automate setup, containerization, and authentication configuration, ensuring a smooth transition from local development to cloud deployment.
 
+## ArchiTechSure repository boundary
+
+This repository is ArchiTechSure's fork of the upstream **EssentialOpen** component. It is a component/source-integration repository, not the ArchiTechSure platform backlog and not a target architecture repository.
+
+- **essential-open-platform (EOP)** owns reusable platform requirements, deployment/runtime behaviour, operations, identity integration, resilience and platform automation. An EOP requirement may be implemented partly in this fork.
+- **ea-developer-kit (EDK)** owns reusable EA solution-development assets such as custom-view tooling, generators, exporters and developer validation.
+- **ea-modeller-kit (EMK)** owns ArchiTechSure modelling method, profiles, patterns, reconciliation and modelling-governance semantics.
+- **ea-repo-work (ERW)** owns planned work that changes what a target EA repository knows: model design/population, governed repository changes and their verification evidence.
+- **Target EA repositories** (for example ATS, Lambeth or Luton) own the accepted architecture facts for that organisation.
+
+Cross-cutting platform capability belongs in EOP even when its implementation changes this component. Repository-content work belongs in ERW, not here.
+
 ## Getting Started
 
 To begin setting up the Essential Open Source EA Tool, follow these steps:
