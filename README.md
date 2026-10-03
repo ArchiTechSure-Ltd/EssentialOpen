@@ -10,15 +10,11 @@ These scripts automate setup, containerization, and authentication configuration
 
 ## ArchiTechSure repository boundary
 
-This repository is ArchiTechSure's fork of the upstream **EssentialOpen** component. It is a component/source-integration repository, not the ArchiTechSure platform backlog and not a target architecture repository.
+This repository is ArchiTechSure's fork of the upstream **EssentialOpen** component. It is a component/source-integration repository, not the ArchiTechSure cross-platform work backlog and not a target architecture repository.
 
-- **essential-open-platform (EOP)** owns reusable platform requirements, deployment/runtime behaviour, operations, identity integration, resilience and platform automation. An EOP requirement may be implemented partly in this fork.
-- **ea-developer-kit (EDK)** owns reusable EA solution-development assets such as custom-view tooling, generators, exporters and developer validation.
-- **ea-modeller-kit (EMK)** owns ArchiTechSure modelling method, profiles, patterns, reconciliation and modelling-governance semantics.
-- **ea-repo-work (ERW)** owns planned work that changes what a target EA repository knows: model design/population, governed repository changes and their verification evidence.
-- **Target EA repositories** (for example ATS, Lambeth or Luton) own the accepted architecture facts for that organisation.
+Reusable ArchiTechSure platform requirements are governed separately and may result in implementation changes here. Organisation/client architecture content, repository population and repository-change evidence do not belong in this source repository.
 
-Cross-cutting platform capability belongs in EOP even when its implementation changes this component. Repository-content work belongs in ERW, not here.
+Changes here should therefore be component implementation, upstream-integration or component-maintenance work.
 
 ## Getting Started
 
