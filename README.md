@@ -8,6 +8,14 @@ Additionally, the repository includes configuration scripts to integrate Azure E
 
 These scripts automate setup, containerization, and authentication configuration, ensuring a smooth transition from local development to cloud deployment.
 
+## ArchiTechSure repository boundary
+
+This repository is ArchiTechSure's fork of the upstream **EssentialOpen** component. It is a component/source-integration repository, not the ArchiTechSure cross-platform work backlog and not a target architecture repository.
+
+Reusable ArchiTechSure platform requirements are governed separately and may result in implementation changes here. Organisation/client architecture content, repository population and repository-change evidence do not belong in this source repository.
+
+Changes here should therefore be component implementation, upstream-integration or component-maintenance work.
+
 ## Getting Started
 
 To begin setting up the Essential Open Source EA Tool, follow these steps:
